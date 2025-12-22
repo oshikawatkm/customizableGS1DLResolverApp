@@ -8,7 +8,7 @@ const APP_CONFIG = {
   common: {
     headerTitle: "GS1 Japan",
     footerText: "© GS1 Japan",
-    logoUrl: "https://www.gs1jp.org/assets/img/common/logo.svg",
+    logoUrl: "img/gs1_logo.svg",
     logoAlt: "GS1 Japan ロゴ"
   },
 
