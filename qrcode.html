@@ -207,7 +207,7 @@
         if (devices && devices.length) {
           const config = { fps: 10, qrbox: 250 };
           reader.start(
-            devices[0].id,
+            { facingMode: "environment" },
             config,
             async qrCodeMessage => {
               if (isProcessing) return;
