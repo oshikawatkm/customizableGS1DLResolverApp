@@ -218,7 +218,7 @@
 
               const linkType = getActiveLinkType();
               const url = new URL(qrCodeMessage);
-              url.search = `?linkType=${encodeURIComponent(linkType)}`;
+              url.search = `?linkType=${encodeURIComponent('gs1:' + linkType)}`;
 
               console.log("遷移先URL:", url.href);
               setTimeout(() => {
