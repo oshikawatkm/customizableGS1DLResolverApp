@@ -57,15 +57,15 @@ const APP_CONFIG = {
     // label: ボタンに表示するテキスト
     // active: 初期選択状態（trueは1つだけ）
     menuButtons: [
-      { linkType: "homepage", label: "事業者情報", active: true },
-      { linkType: "eventsInfo", label: "イベント", active: false },
-      { linkType: "relatedVideo", label: "紹介講座", active: false },
-      { linkType: "backgroundInfo", label: "理念・事業概要", active: false },
-      { linkType: "promotion", label: "キャンペーン", active: false },
-      { linkType: "loyaltyProgram", label: "会員限定", active: false },
-      { linkType: "careersInfo", label: "採用情報", active: false },
-      { linkType: "locationInfo", label: "アクセス", active: false },
-      { linkType: "support", label: "お問い合わせ", active: false }
+      { linkType: "gs1:homepage", label: "事業者情報", active: true },
+      { linkType: "gs1:eventsInfo", label: "イベント", active: false },
+      { linkType: "gs1:relatedVideo", label: "紹介講座", active: false },
+      { linkType: "gs1:backgroundInfo", label: "理念・事業概要", active: false },
+      { linkType: "gs1:promotion", label: "キャンペーン", active: false },
+      { linkType: "gs1:loyaltyProgram", label: "会員限定", active: false },
+      { linkType: "gs1:careersInfo", label: "採用情報", active: false },
+      { linkType: "gs1:locationInfo", label: "アクセス", active: false },
+      { linkType: "gs1:support", label: "お問い合わせ", active: false }
     ]
   }
 };
