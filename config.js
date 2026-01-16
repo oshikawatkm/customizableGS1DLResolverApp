@@ -6,16 +6,16 @@
 const APP_CONFIG = {
   // ===== 共通設定 =====
   common: {
-    headerTitle: "GS1 Japan",
+    headerTitle: "事業者情報",
     footerText: "© GS1 Japan",
-    logoUrl: "img/gs1_logo.svg",
+    logoUrl: "./img/gs1-logo.png",
     logoAlt: "GS1 Japan ロゴ"
   },
 
   // ===== index.html（トップページ）の設定 =====
   index: {
     pageTitle: "GS1 Japan - リゾルバデモ",
-    sectionTitle: "組織情報",
+    sectionTitle: "GS1 Japan",
 
     // 組織情報カードの内容
     infoItems: [
