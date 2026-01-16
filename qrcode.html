@@ -148,8 +148,9 @@
       // ヘッダー
       document.getElementById('header').textContent = config.headerTitle;
 
-      // セクションタイトル
-      document.getElementById('sectionTitle').textContent = config.sectionTitle;
+      // セクションタイトル（初期値はactive状態のボタンのlabelを使用）
+      const activeButton = config.menuButtons.find(btn => btn.active);
+      document.getElementById('sectionTitle').textContent = activeButton ? activeButton.label : config.sectionTitle;
 
       // 説明文
       document.getElementById('instruction').textContent = config.instruction;
@@ -177,6 +178,8 @@
         btn.addEventListener('click', () => {
           buttons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
+          // セクションタイトルを選択中のボタンのlabelに更新
+          document.getElementById('sectionTitle').textContent = btn.textContent;
         });
       });
     }
