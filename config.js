@@ -30,6 +30,10 @@ const APP_CONFIG = {
       {
         label: "電話番号",
         value: "03-5414-8520"
+      },
+      {
+        label: "ウェブサイト",
+        value: "https://www.gs1jp.org"
       }
     ],
 

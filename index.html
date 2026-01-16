@@ -80,6 +80,15 @@
       margin-bottom: 0.3rem;
     }
 
+    .info-item a {
+      color: #002C6C;
+      text-decoration: underline;
+    }
+
+    .info-item a:hover {
+      color: #004494;
+    }
+
     .demo-section {
       text-align: center;
       margin: 2rem 0;
@@ -153,6 +162,12 @@
   <!-- 設定ファイル読み込み -->
   <script src="config.js"></script>
   <script>
+    // URLをリンクに変換する関数
+    function linkifyUrls(text) {
+      const urlRegex = /(https?:\/\/[^\s<]+)/g;
+      return text.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+    }
+
     // 設定を適用
     function applyConfig() {
       const common = APP_CONFIG.common;
@@ -177,7 +192,7 @@
       infoCard.innerHTML = config.infoItems.map(item => `
         <div class="info-item">
           <span class="info-label">${item.label}</span>
-          ${item.value}
+          ${linkifyUrls(item.value)}
         </div>
       `).join('');
 
