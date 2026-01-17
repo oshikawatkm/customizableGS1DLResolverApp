@@ -79,9 +79,9 @@ qrcode: {
 
   // メニューボタンの設定（ボタン数は自由）
   menuButtons: [
-    { linkType: "homepage", label: "事業者情報", active: true },
-    { linkType: "eventsInfo", label: "イベント", active: false },
-    { linkType: "support", label: "お問い合わせ", active: false }
+    { linkType: "gs1:homepage", label: "事業者情報", active: true },
+    { linkType: "gs1:eventsInfo", label: "イベント", active: false },
+    { linkType: "gs1:support", label: "お問い合わせ", active: false }
   ]
 }
 ```
