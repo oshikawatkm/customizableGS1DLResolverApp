@@ -240,7 +240,17 @@
           alert("カメラが見つかりませんでした");
         }
       }).catch(err => {
-        alert("カメラ初期化に失敗しました: " + err);
+        console.error("カメラ初期化エラー:", err);
+        const readerElement = document.getElementById('reader');
+        readerElement.style.maxWidth = 'none';
+        readerElement.innerHTML = `
+          <div style="text-align: center; padding: 2rem; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 8px; color: #721c24;">
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">カメラの初期化に失敗しました</p>
+            <p style="margin-bottom: 1rem;">カメラへのアクセスが許可されていないか、カメラが使用できない状態です。</p>
+            <p style="margin-bottom: 1rem;">画面を更新して再度お試しください。</p>
+            <button onclick="location.reload()" style="background-color: #002C6C; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-size: 1rem; cursor: pointer;">画面を更新する</button>
+          </div>
+        `;
       });
     }
 
