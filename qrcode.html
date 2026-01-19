@@ -188,6 +188,12 @@
     function initQRReader() {
       const reader = new Html5Qrcode("reader");
       let isProcessing = false;
+      let isReady = false;
+
+      // 2秒後に読み取りを有効化
+      setTimeout(() => {
+        isReady = true;
+      }, 2000);
 
       function getActiveLinkType() {
         const active = document.querySelector('.grid-button.active');
@@ -210,6 +216,7 @@
             { facingMode: "environment" },
             config,
             async qrCodeMessage => {
+              if (!isReady) return;
               if (isProcessing) return;
               isProcessing = true;
 
