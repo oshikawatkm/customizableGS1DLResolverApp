@@ -261,6 +261,13 @@
       });
     }
 
+    // ブラウザの「戻る」でキャッシュから復元された場合はリロード
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        location.reload();
+      }
+    });
+
     // ページ読み込み時に初期化
     applyConfig();
     initQRReader();
