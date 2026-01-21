@@ -98,15 +98,15 @@ qrcode: {
 
 | linkType | 説明 |
 |----------|------|
-| `homepage` | 事業者情報 |
-| `eventsInfo` | イベント情報 |
-| `relatedVideo` | 関連動画 |
-| `backgroundInfo` | 理念・事業概要 |
-| `promotion` | キャンペーン |
-| `loyaltyProgram` | 会員限定情報 |
-| `careersInfo` | 採用情報 |
-| `locationInfo` | アクセス・所在地 |
-| `support` | お問い合わせ |
+| `gs1:homepage` | ホームページ |
+| `gs1:eventsInfo` | イベント情報 |
+| `gs1:relatedVideo` | 関連動画 |
+| `gs1:backgroundInfo` | 理念・事業概要 |
+| `gs1:promotion` | キャンペーン |
+| `gs1:loyaltyProgram` | 会員限定情報 |
+| `gs1:careersInfo` | 採用情報 |
+| `gs1:locationInfo` | アクセス・所在地 |
+| `gs1:support` | お問い合わせ |
 
 ## 動作の流れ
 
