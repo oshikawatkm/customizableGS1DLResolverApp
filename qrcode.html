@@ -135,7 +135,9 @@
 
       #reader {
         width: 250px;
+        height: 180px;
         margin: 0.5rem auto;
+        overflow: hidden;
       }
 
       h3 {
@@ -263,8 +265,8 @@
 
       Html5Qrcode.getCameras().then(devices => {
         if (devices && devices.length) {
-          const qrboxSize = window.innerWidth <= 768 ? 180 : 250;
-          const config = { fps: 10, qrbox: qrboxSize };
+          const qrbox = window.innerWidth <= 768 ? { width: 200, height: 130 } : 250;
+          const config = { fps: 10, qrbox: qrbox };
           reader.start(
             { facingMode: "environment" },
             config,
