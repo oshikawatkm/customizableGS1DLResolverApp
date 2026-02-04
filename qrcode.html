@@ -105,8 +105,60 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+      }
+
+      header {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+      }
+
       main {
-        max-width: 90%;
+        margin-top: 60px;
+        max-width: 95%;
+        padding: 0.5rem;
+        overflow-y: auto;
+      }
+
+      .section-title {
+        padding: 0.3rem;
+        font-size: 1rem;
+      }
+
+      .instruction {
+        margin: 0.4rem 0;
+        font-size: 0.9rem;
+      }
+
+      #reader {
+        width: 250px;
+        margin: 0.5rem auto;
+      }
+
+      h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        font-size: 1rem;
+      }
+
+      .button-grid {
+        margin: 0.5rem auto;
+        gap: 6px;
+        max-width: 300px;
+      }
+
+      .grid-button {
+        height: 50px;
+        font-size: 0.8rem;
+        border-width: 2px;
+      }
+
+      footer {
+        padding: 0.5rem;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -211,7 +263,8 @@
 
       Html5Qrcode.getCameras().then(devices => {
         if (devices && devices.length) {
-          const config = { fps: 10, qrbox: 250 };
+          const qrboxSize = window.innerWidth <= 768 ? 180 : 250;
+          const config = { fps: 10, qrbox: qrboxSize };
           reader.start(
             { facingMode: "environment" },
             config,
