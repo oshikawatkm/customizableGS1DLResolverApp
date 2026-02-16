@@ -54,6 +54,13 @@
       flex: 1;
     }
 
+    .site-description {
+      color: #002C6C;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+
     .section-title {
       background-color: #BFBFBF;
       color: white;
@@ -135,6 +142,12 @@
         overflow-y: auto;
       }
 
+      .site-description {
+        margin: 0.3rem 0;
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+
       .section-title {
         padding: 0.3rem;
         font-size: 1rem;
@@ -181,6 +194,7 @@
 
   <main>
     <button class="back-button" onclick="location.href='index.html'">◀ 前画面に戻る</button>
+    <p class="site-description">GS1 Digital LinkではひとつのQRコードで複数のWebページへリンクすることが可能です。メニューリンクのボタンを選択し、再度同じ名刺のQRコードを読み取ってください。</p>
     <h2 class="section-title" id="sectionTitle"></h2>
 
     <div id="reader"></div>
