@@ -147,7 +147,14 @@
 
       #reader {
         width: 250px;
+        max-height: 160px;
+        overflow: hidden;
         margin: 0.5rem auto;
+      }
+
+      #reader video {
+        object-fit: cover;
+        max-height: 160px;
       }
 
       h3 {
@@ -279,7 +286,7 @@
           const isMobile = window.innerWidth <= 768;
           const qrbox = isMobile ? { width: 200, height: 130 } : 250;
           const config = { fps: 10, qrbox: qrbox };
-          if (isMobile) config.aspectRatio = 1.5;
+          if (isMobile) config.aspectRatio = 2.0;
           reader.start(
             { facingMode: "environment" },
             config,
